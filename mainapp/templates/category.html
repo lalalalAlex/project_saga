@@ -1,0 +1,20 @@
+{% extends 'main.html' %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Category</title>
+</head>
+<body>
+{% block content %}
+{% for i in movies %}
+<a href="/movie/{{ i.id }}"><img width="208px" src="{{ i.movie_image.url }}" alt="Xz"></a>
+{% endfor %}
+<br>
+<hr>
+<a href="/">Перейти на главную</a>
+{% endblock %}
+</body>
+</html>
